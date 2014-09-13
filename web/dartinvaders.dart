@@ -1,5 +1,9 @@
+library dartinvaders;
+
 import 'dart:html';
 import 'dart:async';
+
+part 'sprite.dart';
 
 const String BACKGROUND = "images/background.png";
 
