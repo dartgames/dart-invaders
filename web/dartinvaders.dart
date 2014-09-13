@@ -4,6 +4,7 @@ import 'dart:html';
 import 'dart:async';
 
 part 'sprite.dart';
+part 'bullet.dart';
 
 const String BACKGROUND = "images/background.png";
 
