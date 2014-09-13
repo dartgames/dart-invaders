@@ -1,8 +1,8 @@
 part of dartinvaders;
 
 class Alien extends Sprite {
-    static const WIDTH = 80;
-    static const HEIGHT = 80;
+    static const WIDTH = 45;
+    static const HEIGHT = 45;
     static const String IMAGE_NAME = "images/alien.png";
     int frameCount = 0;
     
