@@ -5,6 +5,7 @@ import 'dart:async';
 
 part 'sprite.dart';
 part 'bullet.dart';
+part 'alien.dart';
 
 const String BACKGROUND = "images/background.png";
 
