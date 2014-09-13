@@ -52,6 +52,7 @@ void update(Timer t) {
             t.cancel(); // stop the game
             window.alert("Game over! :(");
             deletedBullets.add(bullet);
+            window.location.reload();
         }
     }
     
@@ -89,6 +90,7 @@ void update(Timer t) {
         if (aliens.isEmpty) {
             t.cancel(); // end game
             window.alert("You win! :)");
+            window.location.reload();
         }
     }
 
