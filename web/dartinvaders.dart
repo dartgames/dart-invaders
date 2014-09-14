@@ -17,6 +17,8 @@ CanvasElement canvas;
 
 Player player;
 
+int score = 0;
+
 List<Alien> aliens;
 List<Bullet> alienBullets;
 List<Bullet> playerBullets;
@@ -50,7 +52,7 @@ void update(Timer t) {
         
         if (bullet.checkCollision(player)) {
             t.cancel(); // stop the game
-            window.alert("Game over! :(");
+            window.alert("Game over! Final score: $score");
             deletedBullets.add(bullet);
             window.location.reload();
         }
@@ -76,6 +78,7 @@ void update(Timer t) {
             if (bullet.checkCollision(alien)) {
                 deletedBullets.add(bullet);
                 deletedAliens.add(alien);
+                score++;
             }
         }
     }
@@ -89,7 +92,7 @@ void update(Timer t) {
         
         if (aliens.isEmpty) {
             t.cancel(); // end game
-            window.alert("You win! :)");
+            window.alert("You win! Final score: $score");
             window.location.reload();
         }
     }
@@ -101,6 +104,10 @@ void draw() {
     CanvasRenderingContext2D canvasContext = canvas.context2D;
     
     canvasContext.drawImage(background, 0, 0);
+    
+    String scoreText = "Score: $score";
+    canvasContext.setFillColorRgb(255, 255, 255);
+    canvasContext.fillText(scoreText, canvas.width - 50, canvas.height - 10);
 
     player.draw(canvasContext);
     
